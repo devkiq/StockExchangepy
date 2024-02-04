@@ -1,12 +1,19 @@
-# Consulta automatizada de Bolsa de Valores
+# Stock Analysis and Email Automation
 
-Um projeto simples para gerar gráficos de preços de ações e enviar análises por e-mail.
+## Description
 
-## Descrição
+This Python project streamlines stock price analysis by generating charts and sending analytical reports via email. The automation of Gmail processes is achieved through the use of the pyautogui library.
 
-Este projeto utiliza Python e diversas bibliotecas para obter dados históricos de preços de ações, gerar um gráfico, calcular estatísticas e enviar análises por e-mail. A automação do Gmail é realizada usando a biblioteca pyautogui.
-
-## Requisitos
+## Requirements
 
 - Python 3.x
-- Bibliotecas: yfinance, matplotlib, pyautogui, pyperclip
+- Libraries: yfinance, matplotlib, pyautogui, pyperclip
+
+## Contributions
+
+Contributions are welcome! Please open an issue to discuss major changes before submitting a pull request.
+
+## License
+
+This project is licensed under the Apache License 2.0.
+

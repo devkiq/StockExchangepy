@@ -1,4 +1,4 @@
-# Nome do Projeto
+# Consulta automatizada de Bolsa de Valores
 
 Um projeto simples para gerar gráficos de preços de ações e enviar análises por e-mail.
 

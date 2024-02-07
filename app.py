@@ -34,7 +34,7 @@ def open_gmail_and_create_email(recipient, subject, message):
     pygui.PAUSE = 2
 
     # Fill email fields
-    fill_field("areuqiac@gmail.com")
+    fill_field("destinatario@email.com")
     fill_field(subject)
     fill_field(message)
 
@@ -44,7 +44,7 @@ def fill_field(value):
     pygui.hotkey("tab")
 
 def get_user_input():
-    return input("Digite o símbolo da ação: ")
+    return input("Enter the stock symbol: ")
 
 def run():
     stock_symbol = get_user_input()
@@ -54,19 +54,19 @@ def run():
 
     max_price, min_price, current_price = calculate_statistics(closing_prices)
 
-    subject = f'Análise de Ações para {stock_symbol}'
-    message = f"""Olá *** abaixo estão as análises solicitadas:
+    subject = f'Stock Analysis for {stock_symbol}'
+    message = f"""Hello *** below are the requested analyses:
 
-    AÇÃO {stock_symbol} COM REFERÊNCIA AOS ÚLTIMOS 6 MESES
+    STOCK {stock_symbol} WITH REFERENCE TO THE LAST 6 MONTHS
 
-    Preço Máximo: R${max_price}
-    Preço Mínimo: R${min_price}
-    Preço Atual: R${current_price}
+    Maximum Price: ${max_price}
+    Minimum Price: ${min_price}
+    Current Price: ${current_price}
 
-    Fique à vontade para entrar em contato com qualquer dúvida.
+    Feel free to reach out with any questions.
 
-    Atenciosamente,
-    Meu nome
+    Regards,
+    MY name
     """
 
     open_gmail_and_create_email("destinatário@email.com", subject, message)

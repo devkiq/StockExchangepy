@@ -14,7 +14,7 @@ def plot_stock_chart(closing_prices, stock_symbol):
     plt.xlabel("Date")
     plt.ylabel("Closing Price")
     plt.savefig("stock_chart.png")
-    plt.show()
+    #plt.show() Active when needed to see the chart
 
 def calculate_statistics(closing_prices):
     max_price, min_price, current_price = (
@@ -34,12 +34,13 @@ def open_gmail_and_create_email(recipient, subject, message):
     pygui.PAUSE = 2
 
     # Fill email fields
-    fill_field("destinatario@email.com")
+    fill_field(recipient)
     fill_field(subject)
     fill_field(message)
 
 def fill_field(value):
     pyclip.copy(value)
+    time.sleep(1) 
     pygui.hotkey("ctrl", "v")
     pygui.hotkey("tab")
 
@@ -54,6 +55,7 @@ def run():
 
     max_price, min_price, current_price = calculate_statistics(closing_prices)
 
+    recipient = input("Digite o e-mail do destinatário: ")
     subject = f'Stock Analysis for {stock_symbol}'
     message = f"""Hello *** below are the requested analyses:
 
@@ -63,13 +65,13 @@ def run():
     Minimum Price: ${min_price}
     Current Price: ${current_price}
 
-    Feel free to reach out with any questions.
+    Feel free to contact for any questions.
 
     Regards,
-    MY name
+    My name
     """
 
-    open_gmail_and_create_email("destinatário@email.com", subject, message)
+    open_gmail_and_create_email(recipient, subject, message)
 
 if __name__ == "__main__":
     run()

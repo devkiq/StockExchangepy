@@ -72,6 +72,19 @@ def run():
     """
 
     open_gmail_and_create_email(recipient, subject, message)
+'''
+# To active aumatic send button click
 
+def click_send_button():
+    pygui.click(x=send_button_x_coord, y=send_button_y_coord)  # Replace with actual coordinates
+    time.sleep(2)  # Wait a bit after clicking Send
+
+# To discover the position of buttons
+
+time.sleep(3)
+mouse = pyautogui.position()
+print(f"The mouse posiction is: {mouse}")
+
+'''
 if __name__ == "__main__":
     run()
